@@ -1,1 +1,6 @@
 # Nmap
+
+
+
+'''bash
+nmap <target>
