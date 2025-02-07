@@ -1,6 +1,6 @@
 **# Nmap Introduction**
 
- Nmap is a network scanning tool that can be used to ascertain what hosts are up on a network or what services are avaiailble among other things
+ Nmap is a network scanning tool that can be used to ascertain what hosts are up on a network or what services are avaiailable among other things
  
 **NOTE** I am using a ParrotOS VM running on my windows 11 laptop so results may vary slightly is you use a different OS or even a different linux based OS like kali or ubuntu but the main principles apply
 
@@ -22,6 +22,16 @@ sudo su
 ```
 simple right? depending on your OS and setup of your machine it might require a password **NOTE** linux will not show your password as you type so dont worry just type the password and press enter if you get it wrong. Dont do what I did and troubleshoot a broken keyboard for 20 minutes.
 
+**NOTE**
+
+"sudo su" is fine for doing tasks on our own personal computers but in an actual cyber security industry role you would use a different command to ensure we arent staying logged in with security purposes that syntax is as follows
+
+```bash
+sudo nmap <target IP>
+```
+
+if you have a password setup then it will ask for a password each time but this is much safer than staying logged in as a root user
+
 Last bit of prep is just to test we are actually able to send messages to the IP and get messages back, Thankfully there is a nifty command we can use to quickly and easily find out
 ```bash
 ping <target IP>
@@ -37,7 +47,7 @@ Use the `nmap` command to scan the network.
 nmap <target IP>
 ```
 
-simple right? this should hopefully let us know what ports are availible and how many hosts are up
+simple right? this should hopefully let us know what ports are available and how many hosts are up
 
 ```bash
 nmap -sV <target IP>
