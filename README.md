@@ -83,6 +83,19 @@ to build on that we can use multiple decoys at once to make it even harder to be
 nmap -D <decoy IP1>,<DecoyIP2> <Target IP>
 ```
 
+To wrap this small demonstration of what you can do with nmap lets end with the "-d" syntax this stands for debug and basically makes nmap tell you whats happening at each step. It's great for trying to learn what nmap is actually doing but it also helps with figuring out what exactly is going wrong if you arent able to get a response
 
+```bash
+nmap -d <target IP>
+```
+
+This can be combined with other syntax to gain a deeper understanding heres an example:
+
+```bash
+nmap -d -A <target IP>
+```
+this will make the terminal display what exactly doing at each step of the aggresive scan handy right?
+
+And there you have it thank you so much for reading and I hope this has demonstrated a good chunk of the basic nmap features I know in a easily readable manner thanks again!
 
 
