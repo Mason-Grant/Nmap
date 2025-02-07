@@ -63,6 +63,26 @@ Next up lets try a more aggressive scan. Literally this next nmap syntax is -A a
 ```bash
 nmap -A <target IP>
 ```
-This will take a bit more time but will find out alot more information if it goes through
+This will take a bit more time but will find out alot more information if it goes through 
+
+information relating to what internet of things(IOT) device is responsible for what port is open. 
+
+Sometimes you might still be unable to get an nmap to return any details. This can be due to intrusion Detection System(IDS) or a firewall. But don't worry we have a work around Decoy Ip addresses!
+
+Heres the syntax
+```bash
+nmap -D <Decoy IP address> <target IP>
+```
+
+this will run a decoy to make it harder for any firewall or IDS to determine your actual IP and prevent access 
+
+to build on that we can use multiple decoys at once to make it even harder to be deteceted however this will increase scan time
+
+```bash
+
+nmap -D <decoy IP1>,<DecoyIP2> <Target IP>
+```
+
+
 
 
